@@ -6,7 +6,8 @@ export default {
       colors: {
         black: '#252526',
         'primary-green': '#377364',
-        'primary-blue': '#375673'
+        'primary-blue': '#375673',
+        gray: '#E0E2E4'
       },
       fontFamily: {
         inter: 'Inter, sans-serif',
