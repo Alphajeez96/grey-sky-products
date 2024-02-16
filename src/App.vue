@@ -28,12 +28,7 @@
       <!-- Accordion Here -->
       <template v-if="!!filteredData.length">
         <div class="accordion-holder transparent-scrollbar">
-          <Accordion
-            class="mb-5"
-            v-for="(product, index) in filteredData"
-            :key="index"
-            :_uid="index"
-          >
+          <Accordion v-for="(product, index) in filteredData" :key="index" :_uid="index">
             <template #title>
               <ProductHolder :product="product" />
             </template>
@@ -50,7 +45,7 @@
       </template>
     </section>
 
-    <!-- Pagination Here -->
+    <!-- Footer Here -->
     <section class="pt-4">
       <AppFooter
         :count="filteredData.length"
@@ -117,7 +112,7 @@ main {
   }
 
   .accordion-holder {
-    @apply mt-5 overflow-auto;
+    @apply mt-5 overflow-auto md:flex md:gap-5 md:flex-wrap;
     height: calc(100vh - 25rem);
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex justify-between items-center mb-5">
+    <div class="flex justify-between md:gap-2 items-center mb-5">
       <img
         :src="product.image || placeholder"
         :alt="product.name"

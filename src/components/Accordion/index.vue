@@ -1,13 +1,12 @@
 <template>
-  <div class="border-b border-[#F0F2F4] pb-3 duration-300">
+  <div class="border-b border-[#F0F2F4] pb-3 duration-300 w-full md:w-[48%] lg:w-full">
     <button
-      @click="toggleAccordion()"
       class="flex items-center w-full"
       :aria-expanded="isOpen"
       :aria-controls="`collapse${_uid}`"
     >
       <slot name="title" />
-      <span class="ml-auto">
+      <span class="ml-auto" @click="toggleAccordion()">
         <Caret
           class="transform transition-transform origin-center duration-500"
           :class="{ 'rotate-x-180': isOpen }"
